@@ -1,5 +1,6 @@
 package com.francisco.crud.controllers;
 
+import com.francisco.crud.dto.ClientDTO;
 import com.francisco.crud.entities.Client;
 import com.francisco.crud.services.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +20,8 @@ public class ClientController {
     private ClientService service;
 
     @GetMapping
-    public ResponseEntity<List<Client>> findAll(){
-        List<Client> list = service.findAll();
+    public ResponseEntity<List<ClientDTO>> findAll(){
+        List<ClientDTO> list = service.findAll();
         return ResponseEntity.ok().body(list);
     }
 }
