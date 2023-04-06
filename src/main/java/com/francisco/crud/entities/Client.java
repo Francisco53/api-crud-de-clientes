@@ -1,9 +1,6 @@
 package com.francisco.crud.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -11,6 +8,7 @@ import java.util.Objects;
 
 
 @Entity
+@Table(name = "tb_client")
 public class Client implements Serializable {
 
     @Id
@@ -19,6 +17,7 @@ public class Client implements Serializable {
     private String name;
     private String cpf;
     private Double income;
+    @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant birthDate;
     private Integer children;
 
