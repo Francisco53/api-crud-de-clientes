@@ -1,7 +1,6 @@
 package com.francisco.crud.controllers;
 
 import com.francisco.crud.dto.ClientDTO;
-import com.francisco.crud.entities.Client;
 import com.francisco.crud.services.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -12,8 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
-import java.util.ArrayList;
-import java.util.List;
+
 
 @RestController
 @RequestMapping(value = "/clients")
